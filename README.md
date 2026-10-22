@@ -26,5 +26,5 @@ npx serve .
 
 ## Créditos de mídia
 
-- Vídeo: [Mixkit](https://mixkit.co) (licença gratuita)
+- Vídeo da hero: montagem de clipes do [Pexels](https://www.pexels.com/videos/) e do [Mixkit](https://mixkit.co) (licença gratuita)
 - Fotos: [Pexels](https://www.pexels.com) (licença gratuita)
