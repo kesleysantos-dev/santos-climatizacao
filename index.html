@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santos Climatização | Conforto em todas as estações</title>
+  <meta name="description" content="Santos Climatização: instalação e manutenção de ar-condicionado, elétrica residencial e comercial, higienização e serviços em geral." />
+  <meta name="theme-color" content="#05080f" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305080f'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black' font-size='42' fill='%231e9bff'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__logo">
+      <svg viewBox="0 0 24 24" class="snow" aria-hidden="true"><use href="#i-snow" /></svg>
+      <span>SANTOS</span>
+    </div>
+    <div class="preloader__bar"><span></span></div>
+  </div>
+
+  <!-- Ícones SVG -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-snow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M12 2v20M4.2 6.5l15.6 11M19.8 6.5l-15.6 11M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10l3.7.3L5.3 7M21 14l-3.7-.3 1.4 3.3M21 10l-3.7.3L18.7 7M3 14l3.7-.3L5.3 17"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8 6.2 21l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.5 2.5-2.6-.6-.6-2.6 2.5-2.5Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12 2.5 4 5.5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10v-6l-8-3Z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12 22c4 0 7-2.8 7-6.8 0-3.4-2.2-5.6-3.6-7.6-.6 1.8-1.6 3-3 3.4.6-3.6-.6-6.8-3.6-9 0 3.6-2.2 5.8-3.6 7.8A8 8 0 0 0 5 15.2C5 19.2 8 22 12 22Z"/></symbol>
+    <symbol id="i-whats" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-face" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.4H7.6V14h2.7v8h3.2Z"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.2v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.6a5.8 5.8 0 1 0 5 5.8V9.1a7.4 7.4 0 0 0 4.3 1.4V7.3a4.3 4.3 0 0 1-3.2-1.5Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M5 3h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 5.3 5.3l1.4-2.2L19 13.5V17a2 2 0 0 1-2 2A15 15 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="m3.5 6.5 8.5 6.5 8.5-6.5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 21.5s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></symbol>
+  </svg>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand" aria-label="Santos Climatização - início">
+        <span class="brand__mark">
+          <svg class="brand__snow"><use href="#i-snow" /></svg>
+          <b>S</b>
+          <svg class="brand__flame"><use href="#i-flame" /></svg>
+        </span>
+        <span class="brand__text">
+          <strong>SANTOS</strong>
+          <small>CLIMATIZAÇÃO</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#galeria">Trabalhos</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato" class="btn btn--sm btn--primary nav__cta">Orçamento grátis</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="hero__media" data-parallax="0.4">
+        <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/img/g2.jpg">
+          <source src="assets/video/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero__overlay"></div>
+      <canvas class="hero__snow" id="snowCanvas" aria-hidden="true"></canvas>
+
+      <div class="container hero__content">
+        <span class="eyebrow reveal" data-delay="0.1"><span class="dot"></span> Atendimento residencial e comercial</span>
+        <h1 class="hero__title">
+          <span class="line"><span>Conforto em</span></span>
+          <span class="line"><span class="grad">todas as estações.</span></span>
+        </h1>
+        <p class="hero__lead reveal" data-delay="0.5">
+          Instalação, manutenção e higienização de ar-condicionado, além de elétrica completa.
+          Serviço limpo, pontual e com garantia, do jeito que a sua casa ou empresa merece.
+        </p>
+        <div class="hero__actions reveal" data-delay="0.65">
+          <a href="#contato" class="btn btn--primary btn--lg magnetic">
+            Solicitar orçamento <svg><use href="#i-arrow" /></svg>
+          </a>
+          <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="btn btn--ghost btn--lg magnetic">
+            <svg><use href="#i-whats" /></svg> Falar no WhatsApp
+          </a>
+        </div>
+
+        <ul class="hero__chips reveal" data-delay="0.8">
+          <li><svg><use href="#i-snow" /></svg> Ar-condicionado</li>
+          <li><svg><use href="#i-bolt" /></svg> Elétrica</li>
+          <li><svg><use href="#i-tools" /></svg> Serviços em geral</li>
+          <li><svg><use href="#i-shield" /></svg> Higienização</li>
+        </ul>
+      </div>
+
+      <a href="#numeros" class="hero__scroll" aria-label="Rolar para baixo"><span></span></a>
+    </section>
+
+    <!-- Números -->
+    <section class="stats" id="numeros">
+      <div class="container stats__grid">
+        <div class="stat reveal"><strong data-count="1200" data-suffix="+">0</strong><span>Serviços realizados</span></div>
+        <div class="stat reveal" data-delay="0.1"><strong data-count="98" data-suffix="%">0</strong><span>Clientes satisfeitos</span></div>
+        <div class="stat reveal" data-delay="0.2"><strong data-count="8" data-suffix=" anos">0</strong><span>De experiência</span></div>
+        <div class="stat reveal" data-delay="0.3"><strong data-count="90" data-suffix=" dias">0</strong><span>De garantia</span></div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="section services" id="servicos">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow reveal"><span class="dot"></span> Nossos serviços</span>
+          <h2 class="section__title reveal" data-delay="0.1">Soluções completas para o seu <span class="grad">clima ideal</span></h2>
+          <p class="section__lead reveal" data-delay="0.2">Da instalação à manutenção preventiva, cuidamos de tudo com técnicos qualificados e materiais de primeira linha.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="card tilt reveal">
+            <div class="card__icon"><svg><use href="#i-snow" /></svg></div>
+            <h3>Ar-condicionado</h3>
+            <p>Instalação e manutenção de split, inverter, cassete e piso-teto, com vácuo, teste de carga e acabamento caprichado.</p>
+            <ul><li>Instalação completa</li><li>Manutenção preventiva</li><li>Recarga de gás</li></ul>
+          </article>
+          <article class="card tilt reveal" data-delay="0.1">
+            <div class="card__icon"><svg><use href="#i-bolt" /></svg></div>
+            <h3>Elétrica</h3>
+            <p>Projetos e reparos elétricos residenciais e comerciais, dentro das normas e com foco total em segurança.</p>
+            <ul><li>Quadros e disjuntores</li><li>Tomadas e iluminação</li><li>Circuitos dedicados</li></ul>
+          </article>
+          <article class="card tilt reveal" data-delay="0.2">
+            <div class="card__icon"><svg><use href="#i-tools" /></svg></div>
+            <h3>Serviços em geral</h3>
+            <p>Pequenos reparos e instalações para manter seu imóvel funcionando sem dor de cabeça.</p>
+            <ul><li>Suportes e furações</li><li>Ventiladores e exaustores</li><li>Ajustes e reparos</li></ul>
+          </article>
+          <article class="card tilt reveal" data-delay="0.3">
+            <div class="card__icon"><svg><use href="#i-shield" /></svg></div>
+            <h3>Higienização</h3>
+            <p>Limpeza profunda com produtos bactericidas para um ar mais puro, mais saúde e mais eficiência.</p>
+            <ul><li>Limpeza de serpentina</li><li>Bactericida e antifúngico</li><li>Menor consumo de energia</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section about" id="sobre">
+      <div class="about__glow" data-parallax="-0.15"></div>
+      <div class="container about__grid">
+        <div class="about__media reveal reveal--left">
+          <div class="about__ring">
+            <img src="assets/img/equipe.jpg" alt="Equipe Santos Climatização" loading="lazy" />
+          </div>
+          <div class="about__badge float">
+            <strong>+8</strong>
+            <span>anos levando conforto</span>
+          </div>
+        </div>
+        <div class="about__text">
+          <span class="eyebrow reveal"><span class="dot"></span> Quem somos</span>
+          <h2 class="section__title reveal" data-delay="0.1">Uma empresa de família, feita de <span class="grad">confiança</span></h2>
+          <p class="reveal" data-delay="0.2">
+            A Santos Climatização nasceu do compromisso de oferecer um serviço honesto, bem-feito e com atendimento próximo.
+            Cada cliente é tratado como parte da família: explicamos tudo, cumprimos prazos e deixamos o ambiente limpo ao final.
+          </p>
+          <ul class="checks">
+            <li class="reveal" data-delay="0.25"><svg><use href="#i-shield" /></svg> Técnicos qualificados e equipados</li>
+            <li class="reveal" data-delay="0.3"><svg><use href="#i-clock" /></svg> Pontualidade e atendimento ágil</li>
+            <li class="reveal" data-delay="0.35"><svg><use href="#i-star" /></svg> Garantia em todos os serviços</li>
+            <li class="reveal" data-delay="0.4"><svg><use href="#i-bolt" /></svg> Orçamento transparente e sem surpresas</li>
+          </ul>
+          <a href="#contato" class="btn btn--primary reveal magnetic" data-delay="0.45">Quero um orçamento <svg><use href="#i-arrow" /></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria / Carrossel -->
+    <section class="section gallery" id="galeria">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow reveal"><span class="dot"></span> Nossos trabalhos</span>
+          <h2 class="section__title reveal" data-delay="0.1">Qualidade que se vê <span class="grad">em cada detalhe</span></h2>
+        </div>
+      </div>
+
+      <div class="marquee" id="marquee">
+        <div class="marquee__track">
+          <figure class="shot"><img src="assets/img/g1.jpg" alt="Manutenção de condensadora" loading="lazy" /><figcaption>Manutenção de condensadora</figcaption></figure>
+          <figure class="shot"><img src="assets/img/g2.jpg" alt="Split instalado em ambiente interno" loading="lazy" /><figcaption>Instalação de split</figcaption></figure>
+          <figure class="shot"><img src="assets/img/g3.jpg" alt="Técnico medindo pressão do gás" loading="lazy" /><figcaption>Recarga de gás</figcaption></figure>
+          <figure class="shot"><img src="assets/img/g5.jpg" alt="Instalação de tomadas" loading="lazy" /><figcaption>Elétrica residencial</figcaption></figure>
+          <figure class="shot"><img src="assets/img/g4.jpg" alt="Manifold de refrigeração" loading="lazy" /><figcaption>Diagnóstico técnico</figcaption></figure>
+          <figure class="shot"><img src="assets/img/g6.jpg" alt="Inspeção de unidade externa" loading="lazy" /><figcaption>Inspeção preventiva</figcaption></figure>
+          <figure class="shot"><img src="assets/img/g7.jpg" alt="Teste em quadro elétrico" loading="lazy" /><figcaption>Quadro elétrico</figcaption></figure>
+          <figure class="shot"><img src="assets/img/g8.jpg" alt="Serviço em telhado" loading="lazy" /><figcaption>Instalação comercial</figcaption></figure>
+          <figure class="shot"><img src="assets/img/g9.jpg" alt="Ferramentas em uso" loading="lazy" /><figcaption>Reparo especializado</figcaption></figure>
+          <figure class="shot"><img src="assets/img/g10.jpg" alt="Manutenção completa" loading="lazy" /><figcaption>Higienização completa</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Processo -->
+    <section class="section process" id="processo">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow reveal"><span class="dot"></span> Como funciona</span>
+          <h2 class="section__title reveal" data-delay="0.1">Simples, rápido e <span class="grad">sem complicação</span></h2>
+        </div>
+        <div class="process__grid">
+          <div class="step reveal"><span class="step__n">01</span><h3>Contato</h3><p>Fale com a gente pelo WhatsApp ou formulário e conte o que precisa.</p></div>
+          <div class="step reveal" data-delay="0.1"><span class="step__n">02</span><h3>Orçamento</h3><p>Avaliamos e enviamos um orçamento claro, sem taxas escondidas.</p></div>
+          <div class="step reveal" data-delay="0.2"><span class="step__n">03</span><h3>Execução</h3><p>Nossa equipe chega no horário e executa o serviço com capricho.</p></div>
+          <div class="step reveal" data-delay="0.3"><span class="step__n">04</span><h3>Garantia</h3><p>Você aproveita o conforto com garantia e suporte pós-serviço.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="section testimonials" id="depoimentos">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow reveal"><span class="dot"></span> Depoimentos</span>
+          <h2 class="section__title reveal" data-delay="0.1">Quem contrata, <span class="grad">recomenda</span></h2>
+        </div>
+        <div class="testimonials__grid">
+          <blockquote class="quote reveal">
+            <div class="stars"><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg></div>
+            <p>“Instalaram dois splits aqui em casa em uma manhã. Tudo limpo, organizado e funcionando perfeitamente.”</p>
+            <footer><span class="avatar">M</span><div><strong>Mariana C.</strong><small>Cliente residencial</small></div></footer>
+          </blockquote>
+          <blockquote class="quote reveal" data-delay="0.1">
+            <div class="stars"><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg></div>
+            <p>“Fazem a manutenção preventiva da nossa loja. Pontuais, atenciosos e o preço é justo. Recomendo muito!”</p>
+            <footer><span class="avatar">R</span><div><strong>Rafael T.</strong><small>Cliente comercial</small></div></footer>
+          </blockquote>
+          <blockquote class="quote reveal" data-delay="0.2">
+            <div class="stars"><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg></div>
+            <p>“A higienização fez diferença na hora, acabou o cheiro e o aparelho ficou gelando muito mais.”</p>
+            <footer><span class="avatar">J</span><div><strong>Juliana P.</strong><small>Cliente residencial</small></div></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section contact" id="contato">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <span class="eyebrow reveal"><span class="dot"></span> Fale conosco</span>
+          <h2 class="section__title reveal" data-delay="0.1">Vamos deixar seu ambiente <span class="grad">perfeito?</span></h2>
+          <p class="reveal" data-delay="0.2">Preencha o formulário e receba seu orçamento direto no WhatsApp. Respondemos rapidinho.</p>
+          <ul class="contact__list">
+            <li class="reveal" data-delay="0.25"><svg><use href="#i-phone" /></svg><div><small>Telefone / WhatsApp</small><a href="https://wa.me/5500000000000" target="_blank" rel="noopener">(00) 00000-0000</a></div></li>
+            <li class="reveal" data-delay="0.3"><svg><use href="#i-mail" /></svg><div><small>E-mail</small><a href="mailto:contato@santosclimatizacao.com.br">contato@santosclimatizacao.com.br</a></div></li>
+            <li class="reveal" data-delay="0.35"><svg><use href="#i-pin" /></svg><div><small>Atendimento</small><span>Sua cidade e região</span></div></li>
+            <li class="reveal" data-delay="0.4"><svg><use href="#i-clock" /></svg><div><small>Horário</small><span>Seg a Sáb · 8h às 18h</span></div></li>
+          </ul>
+        </div>
+
+        <form class="form reveal reveal--right" id="contactForm" novalidate>
+          <h3>Solicite seu orçamento</h3>
+          <div class="field"><input type="text" id="nome" name="nome" placeholder=" " required /><label for="nome">Seu nome</label></div>
+          <div class="field"><input type="tel" id="tel" name="tel" placeholder=" " required /><label for="tel">Telefone</label></div>
+          <div class="field">
+            <select id="servico" name="servico" required>
+              <option value="" disabled selected hidden></option>
+              <option>Instalação de ar-condicionado</option>
+              <option>Manutenção de ar-condicionado</option>
+              <option>Higienização</option>
+              <option>Elétrica</option>
+              <option>Serviços em geral</option>
+            </select>
+            <label for="servico">Serviço desejado</label>
+          </div>
+          <div class="field"><textarea id="msg" name="msg" rows="3" placeholder=" "></textarea><label for="msg">Mensagem (opcional)</label></div>
+          <button type="submit" class="btn btn--primary btn--lg btn--block">Enviar pelo WhatsApp <svg><use href="#i-whats" /></svg></button>
+          <p class="form__note" id="formNote" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#inicio" class="brand">
+          <span class="brand__mark"><svg class="brand__snow"><use href="#i-snow" /></svg><b>S</b><svg class="brand__flame"><use href="#i-flame" /></svg></span>
+          <span class="brand__text"><strong>SANTOS</strong><small>CLIMATIZAÇÃO</small></span>
+        </a>
+        <p class="footer__tag">Conforto em todas as estações.</p>
+        <div class="social">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-insta" /></svg></a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-face" /></svg></a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tiktok" /></svg></a>
+          <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-whats" /></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <ul><li><a href="#servicos">Ar-condicionado</a></li><li><a href="#servicos">Elétrica</a></li><li><a href="#servicos">Higienização</a></li><li><a href="#servicos">Serviços em geral</a></li></ul>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul><li><a href="#sobre">Sobre nós</a></li><li><a href="#galeria">Trabalhos</a></li><li><a href="#depoimentos">Depoimentos</a></li><li><a href="#contato">Contato</a></li></ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li>(00) 00000-0000</li><li>contato@santosclimatizacao.com.br</li><li>@santosclimatizacao</li></ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Santos Climatização. Todos os direitos reservados.</span>
+      <a href="#inicio" class="to-top" aria-label="Voltar ao topo">↑</a>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5500000000000" class="whats-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-whats" /></svg></a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
